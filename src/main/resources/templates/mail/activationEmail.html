@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>权限管理系统-注册</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p>尊敬的用户,你好！</p>
+<p>我们收到了来自您的注册请求</p>
+<p>
+    <a th:with="url=(@{|${baseUrl}/api/activate?code=${user.key}|})" th:href="${url}"
+       th:text="${url}">Activation link</a>
+</p>
+</body>
+</html>

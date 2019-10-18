@@ -1,0 +1,33 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL55Dialect
+    generate-ddl: true
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/auth?characterEncoding=utf8&useSSL=true&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+  mail:
+    host: smtp.qq.com #发送邮件服务器
+    username: 344263239@qq.com #QQ邮箱
+    password: yhbhozooduqdcabc #客户端授权码
+    protocol: smtp #发送邮件协议
+    default-encoding: utf-8
+    port: 25
+  messages:
+    basename: i18n/messages
+
+eureka:
+  client:
+    enabled: true
+    serviceUrl: #注册中心的注册地址
+      defaultZone: http://127.0.0.1:8888/eureka/
+server:
+  port: 8762  #服务端口号
+notice:
+  mail:
+     base-url: http://127.0.0.1:8080
+     from: 344263239@qq.com
+
