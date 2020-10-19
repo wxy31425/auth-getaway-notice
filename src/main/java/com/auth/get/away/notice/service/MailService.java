@@ -1,7 +1,7 @@
 package com.auth.get.away.notice.service;
 
 import com.auth.get.away.notice.core.NoticeProperties;
-import com.auth.get.away.notice.service.dto.Account;
+import com.auth.get.away.notice.service.dto.AccountDTO;
 import com.auth.get.away.notice.service.dto.BusinessAccount;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
@@ -64,7 +64,7 @@ public class MailService {
     }
 
     @Async
-    public void sendEmailFromTemplate(Account account, String templateName, String titleKey) {
+    public void sendEmailFromTemplate(AccountDTO account, String templateName, String titleKey) {
         String langKey = account.getLangKey();
         Locale locale = Locale.forLanguageTag(StringUtils.isEmpty(langKey) ? "en" : langKey);
         Context context = new Context(locale);

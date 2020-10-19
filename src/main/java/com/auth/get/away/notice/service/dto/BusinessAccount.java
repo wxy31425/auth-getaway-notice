@@ -5,14 +5,9 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class BusinessAccount extends Account {
+public class BusinessAccount extends AccountDTO {
 
     private String id;
-
-    /**
-     * 商家Id
-     */
-    private String storeId;
 
     /**
      * 账户名

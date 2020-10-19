@@ -30,9 +30,9 @@ public class BusinessMailService extends MailService {
 //        sendBusinessTemplate(user, "mail/creationEmail", "email.activation.title");
 //    }
 //
-//    @Async
-//    public void sendPasswordResetMail(BusinessAccount user) {
-//        log.debug("Sending password reset email to '{}'", user.getEmail());
-//        sendBusinessTemplate(user, "mail/passwordResetEmail", "email.reset.title");
-//    }
+    @Async
+    public void sendPasswordResetMail(BusinessAccount user) {
+        log.debug("Sending password reset email to '{}'", user.getEmail());
+        sendBusinessTemplate(user, "mail/passwordResetEmail", "email.reset.title");
+    }
 }
